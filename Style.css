@@ -9,31 +9,39 @@ body {
 }
 
 
-.weatherForm{
-    margin: 20px;
+.weatherForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px;
 }
 
-.cityInput{
-    padding: 10px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    border: 1px solid black;
-    border-radius: 5px;
-    margin: 10px;
-    width: 300px;
+.cityInput {
+  padding: 10px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 200px;
 }
 
-#submit-btn{
-    padding: 10px 20px;
-    font-weight: bold;
-    font-size: 1.5rem;
-    background-color: 1px solid black;
-    border-radius: 5px;
-    border: none;
-    background-color: #f37f37;
-    color: #ffffff;
-    cursor: pointer;
+#submit-btn {
+  padding: 10px 16px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  border: none;
+  background-color: #f37f37;
+  color: #ffffff;
+  cursor: pointer;
 }
+
+#submit-btn:hover {
+  background-color: #FE9451;
+}
+
 
 #submit-btn:hover{
     background-color: #FE9451;
@@ -84,5 +92,19 @@ body {
     font-size: larger;
     color: grey;
     text-decoration: underline;
+}
+
+
+@media (max-width: 480px) {
+  .weatherForm {
+    flex-direction: column;
+  }
+
+  .cityInput,
+  #submit-btn {
+    width: 100%;
+    font-size: 1rem;
+    padding: 8px;
+  }
 }
 
